@@ -5,11 +5,11 @@
     <img src="./assets/logoCITi.png" alt="Logo" width="180px">
   </a>
 
-  <h3 align="center">PTA</h3>
+  <h3 align="center">PTC</h3>
 
   <p align="center">
-  Esse boilerplate foi criado durante o processo seletivo de 2022 do CITi e atualizado em 2023.2 com o intuito de aproximar as pessoas aspirantes à realidade
-  dentro do CITi. O boilerplate será usado durante a última etapa do processo seletivo, a qual tem o objetivo de capacitar tecnincamente as pessoas que entrarão no CITi.
+  Esse boilerplate foi criado durante o processo seletivo de 2022 do CITi e atualizado em 202612 com o intuito de aproximar as pessoas aspirantes à realidade
+  dentro do CITi. O boilerplate será usado durante essa etapa do processo seletivo, a qual tem o objetivo de introduzir a subárea de dev aos aspirantes do CITi.
     <br />
     <a href="https://github.com/citi-onboarding/pta-boilerplate"><strong>Explore the docs »</strong></a>
     <br />
@@ -31,21 +31,6 @@
     <ul>
         <li><a href="#how-to-install">How To Install</a></li></li>
         <li><a href="#how-to-run">How To Run</a></li></li>
-        <li><a href="#citi-abstraction-documentation">Citi Abstraction Documentation</a></li></li>
-        <ul>
-        <li><a href="#are-values-undefined">Are Values Undefined</a></li></li>
-        <li><a href="#insert-into-database">Insert Into Database</a></li></li>
-        <li><a href="#get-all">Get All</a></li></li>
-        <li><a href="#find-by-id">Find By ID</a></li></li>
-        <li><a href="#delete-value">Delete Value</a></li></li>
-        <li><a href="#delete">Update</a></li></li>
-        </ul>
-    </ul>
-    <li><a href="#client">Client</a></li>
-        <ul>
-        <li><a href="#how-to-install-client">How To Install Client</a></li></li>
-        <li><a href="#how-to-run-client">How To Run Client</a></li></li>
-        </ul>
     </ul>
     <li><a href="#add-new-dependencies">Add New Dependencies</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -58,15 +43,14 @@
 <br/>
 
   Esse boilerplate foi criado durante o processo seletivo de 2022 do CITi e ele tem o intuito de aproximar as pessoas aspirantes à realidade
-  dentro do CITi. O boilerplate será usado durante a última etapa do processo seletivo, a qual tem o objetivo de capacitar tecnincamente as pessoas que entrarão no CITi.
-  O template foi criado em um monorepo e está estruturado em cliente e servidor.
+  dentro do CITi. O boilerplate será usado durante essa etapa do processo seletivo, a qual tem o objetivo de introduzir a subárea de desenvolvimento.
+  O template foi criado em um monorepo e está estruturado em servidor.
 
 <p align= "center">
     <img src = "./assets/client-server.png" width="85%" margin-top="20px"/>
 </p>
 
-O server tem uma estrutura base de código para a construção de uma API. Já o cliente, contém uma outra estrutura base de código para a construção de todo o frontend da aplicação. 
-Ainda no server, tem uma abstração construída para facilitar o contato de pessoas aspirantes com a construção de uma API.
+O server tem uma estrutura base de código para a construção de uma API.
 
 
 <br/> 
@@ -87,20 +71,23 @@ Ainda no server, tem uma abstração construída para facilitar o contato de pes
    ```bash
    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
    ```
+1. Crie um novo Template:
+   No canto direito supeior, clique em Template, depois em criar um novo repositorio, para ter um repositorio novo no seu computador
+   
 
-1. Clone o repositório
+2. Clone o repositório
 
    ```sh
    git clone URL_DO_REPOSITÓRIO
    ```
 
-2. Entre na pasta /server do repositório
+3. Entre na pasta /server do repositório
 
-3. Abra a pasta /server no vscode
+4. Abra a pasta /server no vscode
 
-4. Vá em terminal e abra o novo terminal 
+5. Vá em terminal e abra o novo terminal 
 
-5. Com o terminal aberto, escreva essa sentença abaixo e dê enter
+6. Com o terminal aberto, escreva essa sentença abaixo e dê enter
 
    ```sh
    yarn install
@@ -174,193 +161,6 @@ Ainda no server, tem uma abstração construída para facilitar o contato de pes
 
 <br/> 
 
-## Citi Abstraction Documentation
-
-<br/>
-
-### Are Values Undefined
-
-<br/>
-
-Essa função verifica se existe um valor undefined passando no argumento.
-
-- Observação: Essa função recebe quantos argumentos forem preciso.
-
-   
-    
-   ```javascript 
-    Retorna o booleano true caso exista valores undefnined
-   ```
-
-   ```javascript
-    Retorna o booleano false caso exista valores undefnined
-   ```
-
-Exemplo:
-<p align= "center">
-    <img src= "./assets/undefined.png" width="85%"/>
-    </p>
-
-<br/> 
-
-### Insert Into Database
-
-<br/>
-
-Essa função tem a finalidade de inserir um valor de modelo dentro de um banco de dados.
-
-- Observação: Essa função recebe o novo objeto a ser inserido como argumentos.
-
-<br/>
-
-   ```javascript 
-    Retorna https 201 caso o procedimento ocorra de forma correta
-   ```
-
-   ```javascript
-    Retorna https 400 caso o procedimento NÃO ocorra de forma correta
-   ```
-
-
-Exemplo:
-<p align= "center">
-    <img src= "./assets/insert.png" width="85%"/>
-    </p>
-
-<br/> 
-
-### Get All
-
-<br/>
-
-Essa função tem a finalidade de pegar TODOS os valores de modelo dentro de um banco de dados.
-
-- Observação: Essa função não tem argumentos.
-
-<br/>
-
-   ```javascript 
-    Retorna https 200 caso o procedimento ocorra de forma correta
-   ```
-
-   ```javascript
-    Retorna https 400 caso o procedimento NÃO ocorra de forma correta
-   ```
-
-
-Exemplo:
-<p align= "center">
-    <img src= "./assets/get.png" width="85%"/>
-    </p>
-
-<br/> 
-
-### Find By Id
-
-<br/>
-
-Essa função tem a finalidade de procurar um valor de modelo dentro de um banco de dado, utilizando o ID.
-
-- Observação: Essa função recebe o ID como argumento.
-
-<br/>
-
-   ```javascript 
-    Retorna o valor procurado caso o procedimento ocorra de forma correta
-   ```
-
-   ```javascript
-    Retorna undefined caso o procedimento NÃO ocorra de forma correta
-   ```
-
-
-Exemplo:
-<p align= "center">
-    <img src= "./assets/find.png" width="85%"/>
-    </p>
-
-<br/> 
-
-
-### Delete Value
-
-<br/>
-
-Essa função tem a finalidade de deletar um valor de modelo dentro de um banco de dado, utilizando o ID.
-
-- Observação: Essa função recebe o ID como argumento.
-
-<br/>
-
-   ```javascript 
-    Retorna https 200 caso o procedimento ocorra de forma correta
-   ```
-
-   ```javascript
-    Retorna https 400 caso o procedimento NÃO ocorra de forma correta
-   ```
-
-Exemplo:
-<p align= "center">
-    <img src= "./assets/delete.png" width="85%"/>
-    </p>
-
-<br/> 
-
-### Update Value
-
-<br/>
-
-Essa função tem a finalidade de atualizar um valor de modelo dentro de um banco de dado, utilizando o ID.
-
-- Observação: Essa função recebe o ID e os novos valores como argumentos.
-
-<br/>
-
-   ```javascript 
-    Retorna https 200 caso o procedimento ocorra de forma correta
-   ```
-
-   ```javascript
-    Retorna https 400 caso o procedimento NÃO ocorra de forma correta
-   ```
-
-Exemplo:
-<p align= "center">
-    <img src= "./assets/update.png" width="85%"/>
-    </p>
-
-<br/> 
-
-## Client
-
-<br/>
-
-## How To Install Client
-
-<br/>
-
-1. Entre na pasta /client do repositório
-
-2. Abra a pasta /client  no vscode
-
-3. Vá em terminal e abra o novo terminal 
-
-4. Com o terminal aberto, escreva essa sentença abaixo e dê enter
-
-   ```sh
-   yarn install
-   ```
-
-   ou 
-
-   ```sh
-   npm install
-   ```
-
-<br/> 
-
-## How To Run Client
 
 <br/>
 
