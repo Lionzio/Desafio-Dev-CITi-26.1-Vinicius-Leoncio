@@ -72,7 +72,7 @@ O server tem uma estrutura base de código para a construção de uma API.
    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
    ```
 1. Crie um novo Template:
-   No canto direito supeior, clique em Template, depois em criar um novo repositorio, para ter um repositorio novo no seu computador
+   No canto direito supeior, clique em Use this template, depois em criar um novo repositorio, para ter um repositorio novo no seu computador
    
 
 2. Clone o repositório
