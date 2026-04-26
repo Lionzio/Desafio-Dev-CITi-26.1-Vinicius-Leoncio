@@ -28,7 +28,7 @@ Para o desafio extra, eu quis ir além de apenas "fazer funcionar". Implementei 
 * **Busca por tamanho e marca:** Implementei filtros que permitem ao lojista encontrar exatamente o que o cliente procura em segundos.
 * **Contagem de estoque:** Em vez de carregar todos os dados na memória, utilizei funções de agregação do Prisma (`_sum`) para que o banco de dados faça o trabalho pesado, garantindo performance mesmo com milhares de itens.
 
-## 5. Como executar o orojeto
+## 5. Como executar o projeto
 Para rodar este projeto em sua máquina, siga estes passos:
 
 1. Certifique-se de que o **Docker Desktop** está ativo.
